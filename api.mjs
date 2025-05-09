@@ -16,3 +16,28 @@ fetch(`https://dattebayo-api.onrender.com/${route}`, {
     .catch((error) => {
         console.error('Erro na requisição:', error);
     });
+
+    //=========AULA 08-05-25==========//
+
+    const host = 'https://dattebayo-api.onrender.com'
+
+fetch(`${host}/characters`, {
+    method: 'GET',
+    headers: {
+        Accept: 'application/json'
+    }
+}).then((response) => {
+    return response.json()
+
+}).then((data) => {
+    // console.log(data.characters[0].images[0])
+    // console.log(data.characters[0].jutsu)
+    var jutsu = data.characters[0].jutsu
+    for (let count = 0; count < jutsu.length; count++) {
+        console.log(jutsu[count].toUpperCase())
+
+    }
+
+}).catch((error) => {
+    console.log(error)
+})

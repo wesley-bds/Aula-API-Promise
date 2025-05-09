@@ -14,6 +14,15 @@
 //     console.error(error)
 // })
 
+//====================================//
+
+// promise.then((data) => {
+//     return data.toUpperCase()
+// }).then((treatedData) => {
+//     console.log(treatedData);
+// })
+//====================================//
+
 const MyPromise2 = new Promise((resolve, reject) => {
     setTimeout(resolve, 2000, "P2 ok!");
 }) 
